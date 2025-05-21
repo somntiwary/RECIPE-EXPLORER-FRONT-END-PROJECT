@@ -1,0 +1,256 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #d9a7c7 0%, #fffcdc 100%);
+  min-height: 100vh;
+  color: #333;
+  transition: background 0.4s ease, color 0.4s ease;
+  padding: 1rem 2rem;
+}
+
+/* Dark Theme */
+body.dark {
+  background: linear-gradient(135deg, #232526 0%, #1c1c1c 100%);
+  color: #eee;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+/* header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #c10077;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.552);
+} */
+
+.fancy-title {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 2.4rem;
+  text-align: left;
+  background: linear-gradient(90deg, #664ca4, #b34794);
+  background-size: 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s linear infinite, float 3s ease-in-out infinite;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 6px 15px rgb(55, 55, 55);
+}
+
+
+
+@keyframes shine {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+
+
+/* Search Section */
+.search-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+#search-input {
+  flex: 1;
+  max-width: 500px;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 40px;
+  font-size: 1.1rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+#search-input:focus {
+  outline: none;
+  box-shadow: 0 0 10px #a18cd1;
+}
+
+#search-btn {
+  background: linear-gradient(90deg, #a18cd1, #f9a7e2);
+  border: none;
+  border-radius: 40px;
+  padding: 0 1.8rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgb(55, 55, 55);
+  transition: background 0.4s ease, box-shadow 0.3s ease;
+}
+
+#search-btn:hover {
+  background: linear-gradient(90deg, #ffa6e6, #a18cd1);
+  box-shadow: 0 6px 15px rgb(55, 55, 55);
+}
+
+/* Recipes Container */
+.recipes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Recipe Card */
+.recipe-card {
+  background: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-10px);
+}
+
+body.dark .recipe-card {
+  background: #2c2c2c;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.recipe-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.2));
+}
+
+.recipe-info {
+  padding: 1rem 1.2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.recipe-title {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 0.6rem;
+}
+
+body.dark .recipe-title {
+  color: #fff;
+}
+
+.ingredients-list {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  max-height: 120px;
+  overflow-y: auto;
+  color: #444;
+}
+
+body.dark .ingredients-list {
+  color: #ccc;
+}
+
+.instructions {
+  font-size: 0.95rem;
+  color: #555;
+  overflow-y: auto;
+  max-height: 150px;
+  line-height: 1.4;
+}
+
+body.dark .instructions {
+  color: #bbb;
+}
+
+/* Scrollbar styling */
+.ingredients-list::-webkit-scrollbar,
+.instructions::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ingredients-list::-webkit-scrollbar-thumb,
+.instructions::-webkit-scrollbar-thumb {
+  background: #a18cd1;
+  border-radius: 3px;
+}
+
+body.dark .ingredients-list::-webkit-scrollbar-thumb,
+body.dark .instructions::-webkit-scrollbar-thumb {
+  background: #2f80ed;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  #search-input {
+    font-size: 1rem;
+  }
+
+  #search-btn {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+
+.theme-btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg,  #ffa6e6, #a18cd1);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgb(55, 55, 55);
+  transition: all 0.4s ease;
+}
+
+.theme-btn:hover {
+  background: linear-gradient(90deg,  #a18cd1, #f9a7e2);
+  box-shadow: 0 6px 15px rgb(55, 55, 55);
+}
+
+body.dark .theme-btn {
+  background: linear-gradient(90deg, #3b98b7, #1e58a4);
+  box-shadow: 0 6px 15px rgb(55, 55, 55);
+}
+
+body.dark .theme-btn:hover {
+  background: linear-gradient(90deg, #1e58a4, #3b98b7);
+  box-shadow: 0 6px 15px rgb(55, 55, 55);
+}
+
+
