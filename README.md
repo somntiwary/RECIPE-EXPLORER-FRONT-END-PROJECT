@@ -98,6 +98,10 @@
 * Demonstrates modern **web development skills** such as theming, responsiveness, and modular layout.
 * Can be enhanced further with **API integration, user authentication, saving favorite recipes**, or **voice-controlled search**, turning it into a scalable product.
 
-![Screenshot (377)](https://github.com/user-attachments/assets/202765c7-4d49-488a-9f5f-dfced68afaf1)
+![Screenshot (384)](https://github.com/user-attachments/assets/ebde80a0-ebb2-425c-8e9c-2c4d2a9a4b3b)
+
+![Screenshot (385)](https://github.com/user-attachments/assets/7fc6b6d5-59c2-47ca-9a2a-19ddf2eefba6)
+
+
 
 
