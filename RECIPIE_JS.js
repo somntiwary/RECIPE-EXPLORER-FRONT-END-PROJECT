@@ -1,4 +1,4 @@
-const apiKey = '52ac6d65640546679c239dcb0abfffdc'; // Spoonacular API Key
+const apiKey = 'API_KEY'; // Replace Your API Key
 const searchBtn = document.getElementById('search-btn');
 const searchInput = document.getElementById('search-input');
 const recipesContainer = document.getElementById('recipes-container');
